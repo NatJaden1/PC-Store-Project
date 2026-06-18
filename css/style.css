@@ -1,0 +1,25 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.hero{
+    background:#454545;
+    color:white;
+    padding:100px 0;
+}
+
+.card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.btn{
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05)
+}
