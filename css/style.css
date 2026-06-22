@@ -35,7 +35,13 @@ body{
     transform:scale(1.05)
 }
 .card-img-top {
-    height: 200px;      /* pick one height */
-    object-fit: cover;  /* crops instead of stretching */
+    height: 200px;      
+    object-fit: cover;  
+    width: 100%;
+}
+
+.img-fluid {
+    height: 200px;      
+    object-fit: cover;  
     width: 100%;
 }
