@@ -88,3 +88,78 @@ if (buildForm) {
         }
     });
 }
+
+document.getElementById("recommendBtn")
+.addEventListener("click", function () {
+
+    const name =
+        document.getElementById("customerName")
+        .value.trim();
+
+    const budget =
+        parseInt(
+            document.getElementById("budget").value
+        );
+
+    const result =
+        document.getElementById("result");
+
+    if (name === "" || isNaN(budget)) {
+        result.innerHTML =
+            `<div class="alert alert-danger">
+                Please enter your name and budget.
+            </div>`;
+        return;
+    }
+
+    let recommendation = "";
+
+    if (budget < 150000) {
+
+        recommendation =
+        `
+        <div class="alert alert-success">
+            <h4>Hello ${name}!</h4>
+            <strong>Recommended Build:</strong>
+            Budget Gamer<br>
+            Ryzen 5 5600<br>
+            RTX 4060<br>
+            16GB RAM<br>
+            Price: KES 120,000
+        </div>
+        `;
+
+    } else if (budget < 300000) {
+
+        recommendation =
+        `
+        <div class="alert alert-success">
+            <h4>Hello ${name}!</h4>
+            <strong>Recommended Build:</strong>
+            Performance Pro<br>
+            Ryzen 7 9800X3D<br>
+            RTX 5070<br>
+            32GB RAM<br>
+            Price: KES 245,000
+        </div>
+        `;
+
+    } else {
+
+        recommendation =
+        `
+        <div class="alert alert-success">
+            <h4>Hello ${name}!</h4>
+            <strong>Recommended Build:</strong>
+            Ultimate Beast<br>
+            Ryzen 9 9950X3D<br>
+            RTX 5080<br>
+            64GB RAM<br>
+            Price: KES 420,000
+        </div>
+        `;
+    }
+
+    result.innerHTML = recommendation;
+
+});
