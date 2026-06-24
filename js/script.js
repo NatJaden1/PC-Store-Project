@@ -89,8 +89,11 @@ if (buildForm) {
     });
 }
 
-document.getElementById("recommendBtn")
-.addEventListener("click", function () {
+const recommendBtn = document.getElementById("recommendBtn");
+
+if (recommendBtn) {
+
+    recommendBtn.addEventListener("click", function () {
 
     const name =
         document.getElementById("customerName")
@@ -163,3 +166,32 @@ document.getElementById("recommendBtn")
     result.innerHTML = recommendation;
 
 });
+}
+
+const searchInput = document.getElementById("searchInput");
+
+if (searchInput) {
+
+    searchInput.addEventListener("keyup", function () {
+
+        let searchValue = this.value.toLowerCase();
+
+        let products =
+            document.querySelectorAll(".product-card");
+
+        products.forEach(function(product) {
+
+            let text =
+                product.textContent.toLowerCase();
+
+            if (text.includes(searchValue)) {
+                product.style.display = "";
+            } else {
+                product.style.display = "none";
+            }
+
+        });
+
+    });
+
+}
