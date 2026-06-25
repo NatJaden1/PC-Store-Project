@@ -263,17 +263,19 @@ if (cartItems) {
 
     let total = 0;
 
-    cart.forEach(item => {
+cart.forEach(item => {
 
-        total += item.price;
+    const price = Number(item.price) || 0;
 
-        cartItems.innerHTML += `
-            <div class="card mb-3 p-3">
-                <h5>${item.name}</h5>
-                <p>KES ${item.price.toLocaleString()}</p>
-            </div>
-        `;
-    });
+    total += price;
+
+    cartItems.innerHTML += `
+        <div class="card mb-3 p-3">
+            <h5>${item.name || "Unknown Product"}</h5>
+            <p>KES ${price.toLocaleString()}</p>
+        </div>
+    `;
+});
 
     const totalPrice =
         document.getElementById("totalPrice");
