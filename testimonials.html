@@ -163,33 +163,41 @@
 
         <form id="reviewForm">
 
-            <div class="mb-3">
-                <label>Your Name</label>
-                <input type="text" class="form-control" id="reviewName">
-            </div>
+    <div class="mb-3">
+        <label>Your Name</label>
+        <input type="text"
+               id="reviewName"
+               class="form-control">
+        <small id="reviewNameError" class="text-danger"></small>
+    </div>
 
-            <div class="mb-3">
-                <label>Rating</label>
-                <select class="form-select" id="reviewRating">
-                    <option value="">Select Rating</option>
-                    <option>⭐⭐⭐⭐⭐</option>
-                    <option>⭐⭐⭐⭐</option>
-                    <option>⭐⭐⭐</option>
-                    <option>⭐⭐</option>
-                    <option>⭐</option>
-                </select>
-            </div>
+    <div class="mb-3">
+        <label>Rating</label>
+        <select id="reviewRating"
+                class="form-select">
+            <option value="">Select Rating</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+        </select>
+        <small id="reviewRatingError" class="text-danger"></small>
+    </div>
 
-            <div class="mb-3">
-                <label>Your Review</label>
-                <textarea class="form-control" rows="5" id="reviewText"></textarea>
-            </div>
+    <div class="mb-3">
+        <label>Your Review</label>
+        <textarea id="reviewText"
+                  class="form-control"
+                  rows="5"></textarea>
+        <small id="reviewTextError" class="text-danger"></small>
+    </div>
 
-            <button class="btn btn-dark">
-                Submit Review
-            </button>
+    <button class="btn btn-dark">
+        Submit Review
+    </button>
 
-        </form>
+</form>
 
     </div>
 

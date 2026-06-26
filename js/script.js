@@ -302,3 +302,54 @@ if (clearCart) {
     });
 
 }
+
+const reviewForm = document.getElementById("reviewForm");
+
+if (reviewForm) {
+
+    reviewForm.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        let valid = true;
+
+        const name =
+            document.getElementById("reviewName").value.trim();
+
+        const rating =
+            document.getElementById("reviewRating").value;
+
+        const review =
+            document.getElementById("reviewText").value.trim();
+
+        document.getElementById("reviewNameError").textContent = "";
+        document.getElementById("reviewRatingError").textContent = "";
+        document.getElementById("reviewTextError").textContent = "";
+
+        if (name === "") {
+            document.getElementById("reviewNameError").textContent =
+                "Please enter your name.";
+            valid = false;
+        }
+
+        if (rating === "") {
+            document.getElementById("reviewRatingError").textContent =
+                "Please select a rating.";
+            valid = false;
+        }
+
+        if (review.length < 15) {
+            document.getElementById("reviewTextError").textContent =
+                "Review must be at least 15 characters long.";
+            valid = false;
+        }
+
+        if (valid) {
+            alert("Thank you for your review!");
+
+            reviewForm.reset();
+        }
+
+    });
+
+}
