@@ -198,10 +198,8 @@ if (searchInput) {
 
 const cartCount = document.getElementById("cartCount");
 
-// Load existing cart
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Update navbar count on page load
 if (cartCount) {
     cartCount.textContent = cart.length;
 }
@@ -218,7 +216,6 @@ document.querySelectorAll(".add-to-cart")
             return;
         }
 
-        // Decrease stock
         stock--;
         this.dataset.stock = stock;
 
@@ -229,22 +226,18 @@ document.querySelectorAll(".add-to-cart")
             stockText.textContent = stock;
         }
 
-        // Create product object
         const product = {
             name: this.dataset.product,
             price: parseInt(this.dataset.price)
         };
 
-        // Add to cart array
         cart.push(product);
 
-        // Save cart
         localStorage.setItem(
             "cart",
             JSON.stringify(cart)
         );
 
-        // Update navbar count
         if (cartCount) {
             cartCount.textContent = cart.length;
         }

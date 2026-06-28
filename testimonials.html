@@ -63,23 +63,33 @@
         </div>
     </div>
 </nav>
-<!-- Hero -->
-<section class="bg-dark text-white text-center py-5">
+
+<main class="flex-grow-1">
+<section class="hero text-center">
     <div class="container">
         <h1>Customer Testimonials</h1>
-        <p>See what our customers have to say about ElitePC Builds.</p>
+        <p>
+            See what our customers have to say about
+            ElitePC Builds.
+        </p>
     </div>
 </section>
 
-<!-- Testimonials -->
-<section class="container py-5">
+
+<section id="reviews" class="container py-5">
 
     <div class="row g-4">
 
         <div class="col-md-4">
             <div class="card h-100 shadow">
                 <div class="card-body">
-                    <h5>⭐⭐⭐⭐⭐</h5>
+                    <div class="text-warning fs-5 mb-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <p>
                         "Excellent customer service and a powerful gaming PC.
                         Everything was assembled perfectly and delivered on time."
@@ -92,7 +102,13 @@
         <div class="col-md-4">
             <div class="card h-100 shadow">
                 <div class="card-body">
-                    <h5>⭐⭐⭐⭐⭐</h5>
+                    <div class="text-warning fs-5 mb-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <p>
                         "The RTX 5070 build exceeded my expectations.
                         Great cable management and amazing performance."
@@ -105,7 +121,13 @@
         <div class="col-md-4">
             <div class="card h-100 shadow">
                 <div class="card-body">
-                    <h5>⭐⭐⭐⭐⭐</h5>
+                    <div class="text-warning fs-5 mb-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <p>
                         "Very knowledgeable staff who helped me choose the
                         perfect workstation for video editing."
@@ -118,7 +140,13 @@
         <div class="col-md-4">
             <div class="card h-100 shadow">
                 <div class="card-body">
-                    <h5>⭐⭐⭐⭐⭐</h5>
+                    <div class="text-warning fs-5 mb-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <p>
                         "Fantastic prices and genuine components.
                         I'll definitely be purchasing my upgrades here again."
@@ -130,8 +158,14 @@
 
         <div class="col-md-4">
             <div class="card h-100 shadow">
-                <div class="card-body">
-                    <h5>⭐⭐⭐⭐⭐</h5>
+                    <div class="card-body">
+                    <div class="text-warning fs-5 mb-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <p>
                         "Customer support answered all my questions quickly,
                         and the PC performs flawlessly."
@@ -144,7 +178,13 @@
         <div class="col-md-4">
             <div class="card h-100 shadow">
                 <div class="card-body">
-                    <h5>⭐⭐⭐⭐⭐</h5>
+                    <div class="text-warning fs-5 mb-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <p>
                         "Highly recommended! The custom build was exactly what
                         I wanted and arrived earlier than expected."
@@ -158,7 +198,8 @@
 
 </section>
 
-<!-- Leave a Review -->
+
+
 <section class="container py-5">
 
     <div class="card shadow p-4">
@@ -180,11 +221,11 @@
         <select id="reviewRating"
                 class="form-select">
             <option value="">Select Rating</option>
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
+            <option value="5">5 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="2">2 Stars</option>
+            <option value="1">1 Star</option>
         </select>
         <small id="reviewRatingError" class="text-danger"></small>
     </div>
@@ -206,6 +247,7 @@
     </div>
 
 </section>
+</main>
 <footer class="bg-dark text-white mt-5">
     <div class="container py-4">
 
